@@ -4,17 +4,18 @@
 
 #include "Core/PossessInterface.h"
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
 
-#include "Frog.generated.h"
+#include "Mario.generated.h"
 
 UCLASS()
-class MOCP_API AFrog : public APawn, public IPossessInterface
+class MOCP_API AMario : public ACharacter, public IPossessInterface
 {
 	GENERATED_BODY()
 
 public:
-	AFrog();
+	// Sets default values for this character's properties
+	AMario();
 
 	//~ Begin IPossessInterface Interface
 	virtual void HandleMovement(const FVector2D& Direction) override;
